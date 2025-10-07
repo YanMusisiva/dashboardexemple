@@ -84,17 +84,17 @@ export default function Home() {
   const [clients, setClients] = useState<Client[]>([
     {
       id: 1,
-      nom: "Marie Kouassi",
-      telephone: "0707123456",
-      adresse: "Abidjan, Cocody",
+      nom: "Marie Kavira",
+      telephone: "0907123456",
+      adresse: "goma, kyeshero",
       mesures: { taille: 165, hanches: 95, epaule: 38, poitrine: 90 },
       credit: 25000,
     },
     {
       id: 2,
       nom: "Jean Bamba",
-      telephone: "0708234567",
-      adresse: "Abidjan, Yopougon",
+      telephone: "0908234567",
+      adresse: "Goma, Birere",
       mesures: { taille: 175, hanches: 85, epaule: 42, poitrine: 95 },
       credit: 0,
     },
@@ -453,11 +453,11 @@ export default function Home() {
         />
         <StatCard
           title="Recettes du mois"
-          value={`${(finances.recettesMois / 1000).toFixed(0)}k FCFA`}
+          value={`${(finances.recettesMois / 1000).toFixed(0)}k FC`}
           subtitle={`${
             finances.recettesJour
               .toString()
-              .replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " FCFA"
+              .replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " FC"
           } aujourd'hui`}
           icon={DollarSign}
           trend="+8% vs mois dernier"
@@ -617,7 +617,7 @@ export default function Home() {
                 <p className="text-sm text-red-600">
                   Crédit restant:{" "}
                   <span className="font-bold">
-                    {client.credit.toLocaleString()} FCFA
+                    {client.credit.toLocaleString()} FC
                   </span>
                 </p>
               </div>
@@ -713,7 +713,7 @@ export default function Home() {
                   <td className="px-6 py-4">
                     <div>
                       <p className="font-semibold text-black">
-                        {cmd.prix.toLocaleString()} FCFA
+                        {cmd.prix.toLocaleString()} FC
                       </p>
                       <p className="text-sm text-gray-500">
                         {cmd.paye.toLocaleString()} payé
@@ -871,13 +871,13 @@ export default function Home() {
             <div>
               <p className="text-sm opacity-75 mb-1">Aujourd'hui</p>
               <p className="text-4xl font-bold">
-                {finances.recettesJour.toLocaleString()} FCFA
+                {finances.recettesJour.toLocaleString()} FC
               </p>
             </div>
             <div className="border-t border-white/20 pt-4">
               <p className="text-sm opacity-75 mb-1">Ce mois</p>
               <p className="text-3xl font-bold">
-                {finances.recettesMois.toLocaleString()} FCFA
+                {finances.recettesMois.toLocaleString()} FC
               </p>
             </div>
           </div>
@@ -888,13 +888,13 @@ export default function Home() {
             <div>
               <p className="text-sm opacity-75 mb-1">Aujourd'hui</p>
               <p className="text-4xl font-bold">
-                {finances.depensesJour.toLocaleString()} FCFA
+                {finances.depensesJour.toLocaleString()} FC
               </p>
             </div>
             <div className="border-t border-white/20 pt-4">
               <p className="text-sm opacity-75 mb-1">Ce mois</p>
               <p className="text-3xl font-bold">
-                {finances.depensesMois.toLocaleString()} FCFA
+                {finances.depensesMois.toLocaleString()} FC
               </p>
             </div>
           </div>
@@ -907,7 +907,7 @@ export default function Home() {
             <p className="text-sm text-gray-600 mb-2">Bénéfice net</p>
             <p className="text-3xl font-bold text-black">
               {(finances.recettesMois - finances.depensesMois).toLocaleString()}{" "}
-              FCFA
+              FC
             </p>
           </div>
           <div className="text-center p-6 bg-gray-50 rounded-lg border border-black/5">
@@ -1044,7 +1044,7 @@ export default function Home() {
                 </div>
                 <input
                   type="number"
-                  placeholder="Crédit (FCFA)"
+                  placeholder="Crédit (FC)"
                   value={formData.credit || ""}
                   onChange={(e) =>
                     setFormData({
@@ -1117,7 +1117,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-4">
                   <input
                     type="number"
-                    placeholder="Prix (FCFA)"
+                    placeholder="Prix (FC)"
                     value={formData.prix || ""}
                     onChange={(e) =>
                       setFormData({
@@ -1129,7 +1129,7 @@ export default function Home() {
                   />
                   <input
                     type="number"
-                    placeholder="Payé (FCFA)"
+                    placeholder="Payé (FC)"
                     value={formData.paye || ""}
                     onChange={(e) =>
                       setFormData({
@@ -1263,7 +1263,7 @@ export default function Home() {
                 Atelier Couture
               </h1>
               <p className="text-gray-500 text-sm mt-1">
-                Système de gestion selon JOHN ASIKIRE
+                Système de gestion selon John ASIKIRE
               </p>
             </div>
             <button
