@@ -454,7 +454,11 @@ export default function Home() {
         <StatCard
           title="Recettes du mois"
           value={`${(finances.recettesMois / 1000).toFixed(0)}k FCFA`}
-          subtitle={`${finances.recettesJour.toLocaleString()} FCFA aujourd'hui`}
+          subtitle={`${
+            finances.recettesJour
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " FCFA"
+          } aujourd'hui`}
           icon={DollarSign}
           trend="+8% vs mois dernier"
         />
