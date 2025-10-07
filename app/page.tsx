@@ -1263,7 +1263,7 @@ export default function Home() {
                 Atelier Couture
               </h1>
               <p className="text-gray-500 text-sm mt-1">
-                Système de gestion premium
+                Système de gestion selon JOHN ASIKIRE
               </p>
             </div>
             <button
